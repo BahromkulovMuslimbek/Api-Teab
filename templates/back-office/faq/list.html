@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ List</title>
+</head>
+<body>
+    <h1>FAQs</h1>
+    <ul>
+        {% for faq in faqs %}
+            <li>
+                <a href="{% url 'faq_detail' faq.pk %}">{{ faq.question }}</a>
+                <a href="{% url 'faq_update' faq.pk %}">Edit</a>
+                <a href="{% url 'faq_delete' faq.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'faq_create' %}">Create new FAQ</a>
+</body>
+</html>

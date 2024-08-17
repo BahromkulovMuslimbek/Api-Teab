@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete FAQ</title>
+</head>
+<body>
+    <h1>Delete FAQ</h1>
+    <p>Are you sure you want to delete "{{ faq.question }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
+    <a href="{% url 'faq_list' %}">Cancel</a>
+</body>
+</html>

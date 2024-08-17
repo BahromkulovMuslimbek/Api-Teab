@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if faq %}Edit{% else %}Create{% endif %} FAQ</title>
+</head>
+<body>
+    <h1>{% if faq %}Edit{% else %}Create{% endif %} FAQ</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>
+            <label for="id_question">Question:</label>
+            <input type="text" name="question" id="id_question" value="{{ faq.question|default:'' }}" required>
+        </p>
+        <p>
+            <label for="id_answer">Answer:</label>
+            <textarea name="answer" id="id_answer" required>{{ faq.answer|default:'' }}</textarea>
+        </p>
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'faq_list' %}">Back to list</a>
+</body>
+</html>

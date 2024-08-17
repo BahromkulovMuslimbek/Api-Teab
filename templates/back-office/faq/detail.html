@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ faq.question }}</title>
+</head>
+<body>
+    <h1>{{ faq.question }}</h1>
+    <p>{{ faq.answer }}</p>
+    <a href="{% url 'faq_update' faq.pk %}">Edit</a>
+    <a href="{% url 'faq_delete' faq.pk %}">Delete</a>
+    <a href="{% url 'faq_list' %}">Back to list</a>
+</body>
+</html>

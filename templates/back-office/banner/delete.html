@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Banner</title>
+</head>
+<body>
+    <h1>Delete Banner</h1>
+    <p>Are you sure you want to delete "{{ banner.title }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
+    <a href="{% url 'banner_list' %}">Cancel</a>
+</body>
+</html>

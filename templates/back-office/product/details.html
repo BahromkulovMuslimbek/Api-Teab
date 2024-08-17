@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.name }}</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+    <p>{{ product.description }}</p>
+    <p>Price: {{ product.price }}</p>
+    <a href="{% url 'product_update' product.pk %}">Edit</a>
+    <a href="{% url 'product_delete' product.pk %}">Delete</a>
+    <a href="{% url 'product_list' %}">Back to list</a>
+</body>
+</html>

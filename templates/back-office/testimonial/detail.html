@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ testimonial.title }}</title>
+</head>
+<body>
+    <h1>{{ testimonial.title }}</h1>
+    {% if testimonial.photo %}
+        <img src="{{ testimonial.photo.url }}" alt="{{ testimonial.title }}">
+    {% endif %}
+    <p>{{ testimonial.description }}</p>
+    <p>By: {{ testimonial.f_name }} {{ testimonial.l_name }}</p>
+    <a href="{% url 'testimonial_update' testimonial.pk %}">Edit</a>
+    <a href="{% url 'testimonial_delete' testimonial.pk %}">Delete</a>
+    <a href="{% url 'testimonial_list' %}">Back to list</a>
+</body>
+</html>

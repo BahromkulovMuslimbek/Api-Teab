@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testimonial List</title>
+</head>
+<body>
+    <h1>Testimonials</h1>
+    <ul>
+        {% for testimonial in testimonials %}
+            <li>
+                <a href="{% url 'testimonial_detail' testimonial.pk %}">{{ testimonial.title }}</a>
+                <a href="{% url 'testimonial_update' testimonial.pk %}">Edit</a>
+                <a href="{% url 'testimonial_delete' testimonial.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'testimonial_create' %}">Create new testimonial</a>
+</body>
+</html>

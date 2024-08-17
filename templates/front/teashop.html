@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+   <!-- shop section start -->
+   <div class="shop_section layout_padding">
+      <div id="my_slider" class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="container">
+                  <h1 class="shop_taital">Our Tea Shop</h1>
+                  <p class="shop_text">It is a long established fact that a reader will beIt is a long established fact
+                     that a reader will be</p>
+                  <div><img src="{% static 'front/images/img-3.png' %}" class="image_3"></div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container">
+                  <h1 class="shop_taital">Our Tea Shop</h1>
+                  <p class="shop_text">It is a long established fact that a reader will beIt is a long established fact
+                     that a reader will be</p>
+                  <div><img src="{% static 'front/images/img-3.png' %}" class="image_3"></div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container">
+                  <h1 class="shop_taital">Our Tea Shop</h1>
+                  <p class="shop_text">It is a long established fact that a reader will beIt is a long established fact
+                     that a reader will be</p>
+                  <div><img src="{% static 'front/images/img-3.png' %}" class="image_3"></div>
+               </div>
+            </div>
+         </div>
+         <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="next">
+            <i class="fa fa-arrow-left"></i>
+         </a>
+         <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+            <i class="fa fa-arrow-right" style="text-align: left;"></i>
+         </a>
+      </div>
+   </div>
+   <!-- shop section end -->
+
+{% endblock %}
